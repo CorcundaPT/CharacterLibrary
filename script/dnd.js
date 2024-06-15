@@ -20,10 +20,10 @@ function writeData() {
         var file = './database/dnd/blank.json';
     };
 
-    fetchData('./database/dnd/blank.json');
+    data = fetchData('./database/dnd/blank.json');
 
-    document.getElementById('name').innerHTML = "a";
-    document.getElementById('level').innerHTML = "a";
-    document.getElementById('race').innerHTML = "a";
-    document.getElementById('class').innerHTML = "a";
+    document.getElementById('name').innerHTML = data.name;
+    document.getElementById('level').innerHTML = data.level;
+    document.getElementById('race').innerHTML = data.race;
+    document.getElementById('class').innerHTML = data.class;
 }
