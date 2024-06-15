@@ -11,7 +11,6 @@ function fetchBlank() {
         .catch(function () {
             dataError = true;
         })
-    console.log(data);
 }
 
 function fetchData() {
@@ -29,7 +28,6 @@ function fetchData() {
         .catch(function () {
             dataError = true;
         })
-    return data;
 }
 
 function writeData() {
