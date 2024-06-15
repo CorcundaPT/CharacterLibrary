@@ -1,0 +1,71 @@
+{
+    "name": "Broll",
+    "level": 8,
+    "race": "Human",
+    "class": "Barbarian",
+    
+    "strength": 15,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 11,
+    "wisdom": 12,
+    "charisma": 10,
+
+    "strength_save": 1,
+    "dexterity_save": 0,
+    "constitution_save": 1,
+    "intelligence_save": 0,
+    "wisdom_save": 0,
+    "charisma_save": 0,
+
+    "acrobatics": 0,
+    "animalHandling": 0,
+    "arcana": 0,
+    "athletics": 0,
+    "deception": 1,
+    "history": 0,
+    "insight": 0,
+    "intimidation": 1,
+    "investigation": 0,
+    "medicine": 0,
+    "nature": 1,
+    "perception": 0,
+    "performance": 1,
+    "persuasion": 0,
+    "religion": 0,
+    "sleightOfHands": 0,
+    "stealth": 0,
+    "survival": 1,
+
+    "copper": 28,
+    "silver": 50,
+    "gold": 61,
+    "platinum": 0,
+
+    "backpack": [
+        {
+            "item": "Cutelo Extensível +2",
+            "quantity": 1
+        },
+        {
+            "item": "Hand-Axe",
+            "quantity": 2
+        },
+        {
+            "item": "Hook",
+            "quantity": 1
+        },
+        {
+            "item": "Javelin",
+            "quantity": 2
+        },
+        {
+            "item": "Shield, Capitã Maria",
+            "quantity": 1
+        },
+        {
+            "item": "War-Hammer",
+            "quantity": 1
+        }
+    ]
+}

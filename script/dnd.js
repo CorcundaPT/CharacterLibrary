@@ -15,7 +15,7 @@ function fetchBlank() {
 }
 
 function fetchData() {
-    var file = "./" + location.hash.replace("#", "") + ".json";
+    var file = "./database/dnd/" + location.hash.replace("#", "") + ".json";
 
     fetch(file)
         .then((response) => {
