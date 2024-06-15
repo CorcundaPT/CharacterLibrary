@@ -13,8 +13,9 @@ function writeData() {
             }
             return response.json();
         })
-        .then((json) =>
-            data = json)
+        .then((json) => {
+            var data = json;
+        })
         .catch(function () {
             dataError = true;
         })
