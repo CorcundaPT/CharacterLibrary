@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style/main.css">
+        <script src="script/main.js"></script>
+    </head>
+    <body>
+        <nav></nav>
+
+        <p> <span id="STR"></span> </p>
+        <p> <span id="DEX"></span> </p>
+        <p id="CON"></p>
+        <p id="INT"></p>
+        <p id="WIS"></p>
+        <p id="CHA"></p>
+
+        <!--<script>
+            function fetchData() {
+                fetch('./Broll.json')
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error ("HTTP error " + response.status);
+                        }
+                        return response.json();
+                    })
+                    .then((data) =>
+                        console.log(data.strength))
+                    .catch(function () {
+                        dataError = true;
+                    })
+                
+                document.getElementById('STR').textContent = data.strength;
+            }
+            fetchData();
+        </script>-->
+    </body>
+</html>
