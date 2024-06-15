@@ -1,20 +1,10 @@
-function fetchBlank() {
-    fetch("./database/dnd/blank.json")
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error ("HTTP error " + response.status);
-            }
-            return response.json();
-        })
-        .then((data) =>
-            console.log(data))
-        .catch(function () {
-            dataError = true;
-        })
-}
-
-function fetchData() {
-    var file = "./database/dnd/" + location.hash.replace("#", "") + ".json";
+function writeData() {
+    if (location.hash) {
+        var file = "./database/dnd/" + location.hash.replace("#", "") + ".json";
+    }
+    else {
+        var file = "./database/dnd/blank.json";
+    }
 
     fetch(file)
         .then((response) => {
@@ -28,18 +18,9 @@ function fetchData() {
         .catch(function () {
             dataError = true;
         })
-}
 
-function writeData() {
-    if (location.hash) {
-        var data = fetchData();
-    }
-    else {
-        var data = fetchBlank();
-    }
-
-    document.getElementById('name').innerHTML = "name";
-    document.getElementById('level').innerHTML = "level";
-    document.getElementById('race').innerHTML = "race";
-    document.getElementById('class').innerHTML = "class";
+    document.getElementById('name').innerHTML = data.name;
+    document.getElementById('level').innerHTML = data.leve;
+    document.getElementById('race').innerHTML = data.race;
+    document.getElementById('class').innerHTML = data.class;
 }
