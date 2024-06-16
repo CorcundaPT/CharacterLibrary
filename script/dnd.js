@@ -22,7 +22,9 @@ function writeData() {
 
     fetchData(file).then((data) => {
         jsonData = data;
-    })
+    });
+
+    console.log(jsonData);
 
     document.getElementById('name').innerHTML = jsonData.name;
     document.getElementById('level').innerHTML = jsonData.level;
