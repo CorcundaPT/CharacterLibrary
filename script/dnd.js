@@ -5,12 +5,13 @@ async function fetchData(file) {
             throw new Error ("HTTP error " + response.status);
         }
         const data = await response.json();
+        console.log(data);
+        return data;
     }
     catch(error) {
         console.log(error);
     }
 
-    console.log(data);
 }
 
 function writeData() {
