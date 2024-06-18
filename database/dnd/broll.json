@@ -1,13 +1,20 @@
 {
     "name": "Broll",
-    "level": 8,
     "race": "Human",
-
     "class": [
         {
-            "class": "barbarian",
+            "class": "Barbarian",
             "level": 8,
-            "subClass": "ancestralGuardian"
+            "subClass": "Ancestral Guardian"
+        }
+    ],
+
+    "maxHitPoints": "110",
+    "armorClass": "17 (15)",
+    "speed": [
+        {
+            "type": "walking",
+            "speed": "40ft"
         }
     ],
     

@@ -24,16 +24,24 @@ function writeData() {
 
     fetchData("https://corcundapt.github.io/CharacterLibrary/database/dnd/broll.json").then((data) => {
         console.log(data);
+        
+        //Get the highest class level to display and add them up together
+        let higherLevelClass = ["", 0];
+        let totalLevel = 0;
+        for (let element of data.class) {
+            //Highest level
+            if (higherLevelClass[1] < element.level) {
+                higherLevelClass = [element.class, element.level];
+            }
+            //Total Level
+            totalLevel = totalLevel + element.level;
+        };
 
         //Character Main Info (name, level, race, class)
         document.getElementById('name').innerHTML = data.name;
-        document.getElementById('level').innerHTML = data.level;
+        document.getElementById('level').innerHTML = totalLevel;
         document.getElementById('race').innerHTML = data.race;
-        document.getElementById('class').innerHTML = "Barbarian";
-        for (let element of data.class) {
-            console.log(element)
-        }
-        
+        document.getElementById('class').innerHTML = higherLevelClass[0];
 
         //Calculate Modifiers
         var strength_modifier = Math.floor((data.strength - 10) / 2);
@@ -110,6 +118,14 @@ function writeData() {
         document.getElementById('stealth').innerHTML = '(' + displayBonus(stealth) + ')';
         document.getElementById('survival').innerHTML = '(' + displayBonus(survival) + ')';
 
-        //
+        //Calculate Currency
+        let totalCurrency = "";
+        if (data.copper > 0) {totalCurrency = totalCurrency + data.copper + 'CP '}
+        if (data.silver > 0) {totalCurrency = totalCurrency + data.silver + 'SP '}
+        if (data.gold > 0) {totalCurrency = totalCurrency + data.gold + 'GP '}
+        if (data.platinum > 0) {totalCurrency = totalCurrency + data.platinum + 'PP '}
+
+        //Display Currency
+        document.getElementById('currency').innerHTML = totalCurrency;
     });
 }
