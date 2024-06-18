@@ -30,8 +30,8 @@ function writeData() {
         document.getElementById('level').innerHTML = data.level;
         document.getElementById('race').innerHTML = data.race;
         document.getElementById('class').innerHTML = "Barbarian";
-        for (let element of data.backpack) {
-            console.log(element.item)
+        for (let element of data.class) {
+            console.log(element)
         }
         
 

@@ -3,16 +3,13 @@
     "level": 8,
     "race": "Human",
 
-    "class":
+    "class": [
         {
-            "barbarian": 8,
-            "cleric": 0,
-            "rogue": 0
-        },
-    "subClass":
-        {
-            "ancestralGuardian": 1
-        },
+            "class": "barbarian",
+            "level": 8,
+            "subClass": "ancestralGuardian"
+        }
+    ],
     
     "strength": 15,
     "dexterity": 14,
