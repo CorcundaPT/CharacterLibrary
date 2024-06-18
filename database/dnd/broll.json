@@ -2,7 +2,17 @@
     "name": "Broll",
     "level": 8,
     "race": "Human",
-    "class": "Barbarian",
+
+    "class":
+        {
+            "barbarian": 8,
+            "cleric": 0,
+            "rogue": 0
+        },
+    "subClass":
+        {
+            "ancestralGuardian": 1
+        },
     
     "strength": 15,
     "dexterity": 14,

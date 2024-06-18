@@ -4,12 +4,12 @@
     "race": "none",
     "class": "none",
     
-    "strength": "miss",
-    "dexterity": "miss",
-    "constitution": "miss",
-    "intelligence": "miss",
-    "wisdom": "miss",
-    "charisma": "miss",
+    "strength": 0,
+    "dexterity": 0,
+    "constitution": 0,
+    "intelligence": 0,
+    "wisdom": 0,
+    "charisma": 0,
 
     "strength_save": 0,
     "dexterity_save": 0,
