@@ -24,24 +24,12 @@ function writeData() {
 
     fetchData("https://corcundapt.github.io/CharacterLibrary/database/dnd/broll.json").then((data) => {
         console.log(data);
-        
-        //Get the highest class level to display and add them up together
-        let higherLevelClass = ["", 0];
-        let totalLevel = 0;
-        for (let element of data.class) {
-            //Highest level
-            if (higherLevelClass[1] < element.level) {
-                higherLevelClass = [element.class, element.level];
-            }
-            //Total Level
-            totalLevel = totalLevel + element.level;
-        };
 
         //Character Main Info (name, level, race, class)
         document.getElementById('name').innerHTML = data.name;
-        document.getElementById('level').innerHTML = totalLevel;
+        document.getElementById('level').innerHTML = data.class;
         document.getElementById('race').innerHTML = data.race;
-        document.getElementById('class').innerHTML = higherLevelClass[0];
+        document.getElementById('class').innerHTML = data.class;
 
         //Calculate Modifiers
         var strength_modifier = Math.floor((data.strength - 10) / 2);
